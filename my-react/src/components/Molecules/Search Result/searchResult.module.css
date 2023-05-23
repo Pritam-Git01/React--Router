@@ -1,0 +1,19 @@
+.resultList {
+    background-color: white;
+    width: 32vw;
+    min-height: 0;
+    max-height: 40vh;
+    overflow: scroll;
+    margin-left: 36vw;
+    margin-top: 0.2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.resultList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .resultList div {
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
+  }
