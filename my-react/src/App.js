@@ -1,17 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { store } from './App/store'
+import { store } from './App/store';
 import { Provider } from 'react-redux'
+import Movie from './components/Pages/MoviePage/movie';
 
 function App() {
-  return (
-    ReactDOM.render(
-      <Provider store={store}>
+    return (
+      <Provider store = {store}>
+        <>
+        <Movie/>
+        </>
         
-      </Provider>,
-      document.getElementById('root')
+      </Provider>
     )
-  );
+    
 }
 
 export default App;
