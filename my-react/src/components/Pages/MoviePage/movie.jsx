@@ -1,7 +1,8 @@
 import React from 'react';
 
+
 import {useSelector,useDispatch} from 'react-redux';
-import { getAllMovies,setLoading } from './movieSlice';
+import { getAllMovies,setLoading} from './movieSlice';
 
 
 
@@ -13,10 +14,12 @@ const dispatch = useDispatch();
 
 function handleClick () {
   dispatch(setLoading(!movieState.loading))
-  dispatch(getAllMovies)
+  dispatch(getAllMovies())
 }
 
-console.log("movie", movieState)
+
+console.log("movies1", movieState)
+console.log("movie2", movieState.movies)
   return (
     <>
     <div><button onClick={handleClick}>Get Movies</button></div>
