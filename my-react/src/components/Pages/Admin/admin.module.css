@@ -1,0 +1,78 @@
+
+
+  .admin {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+ .inputs {
+    margin-top: 1.6rem;
+    margin-bottom: 1.8rem;
+   
+ }
+
+  input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid #fac0fa;
+    border-radius: 4px;
+    width: 24vw;
+    
+    margin-left: 0.4rem;
+
+  }
+  label {
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 650;
+    color: rgb(244, 196, 204); 
+  }
+  .btn {
+    height: 2rem;
+    width: 6rem;
+    color: whitesmoke;
+    background-color: aquamarine;
+    text-decoration: none;
+    border: 1 px solid rgb(244, 148, 148);
+    border-radius: 0.2rem; 
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 1;
+    margin-left: 0.8rem;
+}
+.btn::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 1s;
+
+}
+.btn:hover::before {
+    transform: scaleX(1);
+    z-index: -1;
+}
+
+.questionList {
+    list-style-type: none;
+   min-height: 0;
+   max-height: 24vh;
+   margin-top: 2rem;
+   overflow: scroll;
+   scroll-behavior: smooth;
+   background-color: #fac0fa;
+   color: blueviolet;
+   justify-content: center;
+   align-items: center;
+    display: flex;
+    flex-direction: column;
+}

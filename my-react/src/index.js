@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Admin from './components/Pages/Admin/admin';
+import User from './components/Pages/User/user';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -12,6 +14,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App/>,
   },
+  {
+    path: '/admin',
+    element: <Admin/>
+  },
+  {
+    path: '/user',
+    element: <User/>
+  }
   
 
 ]);

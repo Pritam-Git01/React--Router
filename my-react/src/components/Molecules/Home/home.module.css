@@ -1,0 +1,14 @@
+
+div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+.admin, .user {
+    font-size: 8rem;
+    padding: auto;
+    margin: 10rem 6rem;
+}
