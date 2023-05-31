@@ -1,0 +1,14 @@
+.result {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 1rem;
+}
+.result img {
+    height: 14rem;
+    width: auto;
+}

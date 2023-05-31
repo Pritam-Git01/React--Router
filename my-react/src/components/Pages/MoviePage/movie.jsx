@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import styles from './movie.module.css'
+
 
 
 import {useSelector,useDispatch} from 'react-redux';
@@ -12,29 +14,31 @@ const movieState = useSelector((state) => state.newState);
 const dispatch = useDispatch();
 
 
-function handleClick () {
-  dispatch(setLoading(!movieState.loading))
-  dispatch(getAllMovies())
-}
+  useEffect(() => {
+    dispatch(setLoading(!movieState.loading))
+    dispatch(getAllMovies())
+  },[])
 
 
-console.log("movies1", movieState)
-console.log("movie2", movieState.movies)
+
   return (
     <>
-    <div><button onClick={handleClick}>Get Movies</button></div>
+    
     
       {movieState.movies.map((item) => {
         return (
           <>
-          <ol key={item.imdbID}>
-          <li><img src={item.poster} alt='movie-poster'/></li>
-          <li>{item.title}</li>
-          <li>{item.year}</li>
-          <li>{item.imdbID}</li>
-          <li>{item.type}</li> 
-        </ol>
-          </>
+          
+            <div className={styles.result} key={item.imdbID}>
+              <h2>{item.Title}</h2>
+              <p>{item.Year}</p>
+              <img src={item.Poster} alt='poster'/>
+              <button>Add To Fav</button>
+
+            </div>
+          
+        
+        </>
         )
         
       })}

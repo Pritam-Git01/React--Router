@@ -29,7 +29,7 @@ const movieSlice = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(getAllMovies.fulfilled, (state, action) => {
-      state.movies = action.payload;
+      state.movies = action.payload.Search;
       state.loading = false;
     });
     builder.addCase(getAllMovies.rejected, (state, action) => {
